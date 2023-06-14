@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import './globals.css';
-import "primereact/resources/primereact.min.css";  
-import { Inter } from 'next/font/google';
+import "primereact/resources/primereact.min.css";
 import { Inter, Roboto } from 'next/font/google';
 import LayoutApp from '@/components/LayoutApp';
 import Provider from '@/components/Provider';
