@@ -2,6 +2,7 @@ import Head from 'next/head';
 import './globals.css';
 import "primereact/resources/primereact.min.css";  
 import { Inter } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 import LayoutApp from '@/components/LayoutApp';
 import Provider from '@/components/Provider';
 
@@ -14,6 +15,10 @@ import 'primereact/resources/primereact.min.css';
 // import 'primeicons/primeicons.css';
 
 const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Edom-app',
@@ -25,9 +30,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Provider>
+        <main className={roboto.className}>
           <LayoutApp>
             {children}
           </LayoutApp>
+        </main>
         </Provider>
       </body>
     </html>

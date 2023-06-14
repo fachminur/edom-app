@@ -16,7 +16,7 @@ import { signOut } from 'next-auth/react';
 export default function TopBar({ showNav, setShowNav }) {
   return (
     <div
-      className={`fixed w-full h-16 flex justify-between items-center transition-all duration-[400ms] ${
+      className={`bg-white fixed w-full h-16 flex justify-between items-center transition-all duration-[400ms] ${
         showNav ? 'pl-56' : ''
       }`}
     >

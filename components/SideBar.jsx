@@ -1,6 +1,11 @@
 import { forwardRef } from 'react';
 import Link from 'next/link';
-import { HomeIcon, CreditCardIcon, UserIcon } from '@heroicons/react/24/solid';
+import {
+  HomeIcon,
+  CreditCardIcon,
+  UserIcon,
+  ChartPieIcon,
+} from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 
 const SideBar = forwardRef(({ showNav }, ref) => {
@@ -8,7 +13,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
 
   return (
     <div ref={ref} className="fixed w-56 h-full bg-white shadow-sm">
-      <div className="flex justify-center mt-6 mb-14">
+      <div className="flex justify-center mt-6 mb-10">
         <picture>
           <img
             className="w-24 h-auto rounded-full"
@@ -18,55 +23,106 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </picture>
       </div>
 
-      <div className="flex flex-col">
-        <Link href="/">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == '/'
-                ? 'bg-orange-100 text-orange-500'
-                : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-            }`}
-          >
-            <div className="mr-2">
-              <HomeIcon className="h-5 w-5" />
+      <div
+        className="pl-5 pr-7 fixed overflow-auto h-5/6 z-0 w-56"
+        // className="layout-sidebar"
+      >
+        <ul>
+          <li>
+            <div className=" uppercase font-semibold text-gray-700 m-1 text-sm">
+              Home
             </div>
-            <div>
-              <p>Home</p>
+          </li>
+          <ul>
+            <li>
+              <Link
+                href="/"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <HomeIcon className="h-5 w-5 mr-3" />
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboards"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/dashboards'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <ChartPieIcon className="h-5 w-5 mr-3" />
+                <span>Dashboard</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <HomeIcon className="h-5 w-5 mr-3" />
+                <span>Home</span>
+              </Link>
+            </li>
+          </ul>
+        </ul>
+        <ul>
+          <li>
+            <div className=" uppercase font-semibold text-gray-700 m-1 text-sm">
+              Home
             </div>
-          </div>
-        </Link>
-        <Link href="/account">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == '/account'
-                ? 'bg-orange-100 text-orange-500'
-                : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-            }`}
-          >
-            <div className="mr-2">
-              <UserIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Account</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="/billing">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == '/billing'
-                ? 'bg-orange-100 text-orange-500'
-                : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-            }`}
-          >
-            <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Billing</p>
-            </div>
-          </div>
-        </Link>
+          </li>
+          <ul>
+            <li>
+              <Link
+                href="/"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <HomeIcon className="h-5 w-5 mr-3" />
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <HomeIcon className="h-5 w-5 mr-3" />
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/"
+                className={`p-[.75rem] cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'bg-orange-100 text-orange-500'
+                    : 'text-[#3f3f46] hover:bg-bg-primary-hover/50 hover:text-text-primary-hover rounded-xl'
+                }`}
+              >
+                <HomeIcon className="h-5 w-5 mr-3" />
+                <span>Home</span>
+              </Link>
+            </li>
+          </ul>
+        </ul>
       </div>
     </div>
   );

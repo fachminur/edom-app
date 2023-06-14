@@ -12,7 +12,17 @@ module.exports = {
     extend: {
       colors: {
         'text-primary-hover': '#f97316',
-        'bg-primary-hover': '#feddc7',
+        'bg-primary-hover': '#ffedd5',
+        'primary-color': '#6366F1',
+        'text-color': '#495057',
+        'text-color-secondary': '#6c757d',
+      },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        16: 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific column configuration
+        footer: '200px minmax(900px, 1fr) 100px',
       },
     },
   },
