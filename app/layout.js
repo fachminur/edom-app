@@ -4,6 +4,7 @@ import "primereact/resources/primereact.min.css";
 import { Inter, Roboto } from 'next/font/google';
 import LayoutApp from '@/components/LayoutApp';
 import Provider from '@/components/Provider';
+import ReactQuery from '@/components/ReactQuery';
 
 //theme
 import 'primereact/resources/themes/tailwind-light/theme.css';
@@ -29,11 +30,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Provider>
-        <main className={roboto.className}>
-          <LayoutApp>
-            {children}
-          </LayoutApp>
-        </main>
+          <ReactQuery>
+            <main className={roboto.className}>
+              <LayoutApp>
+                {children}
+              </LayoutApp>
+            </main>
+          </ReactQuery>
         </Provider>
       </body>
     </html>

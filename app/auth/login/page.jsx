@@ -10,8 +10,8 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('melati putri sekar ingtyas')
+  const [password, setPassword] = useState('JarikuKaku12')
   const [validation, setValidation] = useState({})
   const [errorMsg, setErrorMsg] = useState('')
 

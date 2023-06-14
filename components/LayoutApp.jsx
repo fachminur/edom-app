@@ -4,12 +4,17 @@ import SideBar from './SideBar';
 import TopBar from './TopBar';
 import { Transition } from '@headlessui/react';
 import { useSession } from 'next-auth/react';
+import axios from 'axios';
 
 export default function LayoutApp({ children }) {
   const [showNav, setShowNav] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   const { data: session, status } = useSession();
+
+  if (session) {
+    axios.defaults.headers.common.Authorization = `Bearer ${session?.user?.staraToken}`;
+  }
 
   function handleResize() {
     if (innerWidth <= 640) {
