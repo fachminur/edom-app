@@ -79,12 +79,8 @@ const LoginPage = () => {
                 />
               </div>
               <div className=" mb-5 text-center">
-                <div className="text-900 text-3xl font-medium mb-3">
-                  Welcome,
-                </div>
-                <span className="text-600 font-medium">
-                  Sign in to continue
-                </span>
+                <div className="text-3xl font-semibold mb-3">Welcome,</div>
+                <span className="font-medium">Sign in to continue</span>
               </div>
               <div className="flex items-center justify-center mb-4">
                 {errorMsg ? (
@@ -153,7 +149,7 @@ const LoginPage = () => {
                     <Button
                       onClick={(e) => handleSubmit(e)}
                       label="Submit"
-                      className="w-full"
+                      className="w-full button-modif"
                       size="small"
                     />
                   </div>
