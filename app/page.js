@@ -1,8 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { InputText } from 'primereact/inputtext';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const { data: session } = useSession()
+  const router = useRouter()
   const [loading, setLoading] = useState(false);
   const [value, setValue] = useState('');
   const load = () => {
@@ -12,6 +16,12 @@ export default function Home() {
       setLoading(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    if (!session) {
+      router.push('/auth/login')
+    }
+  }, [session])
   return (
     <>
       <p className="text-gray-700 text-3xl mb-16 font-bold">Dashboard</p>
