@@ -2,28 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-primary: #FFC107;
+    --button-primary: #FFC107;
+    --button-primary-hover: #ecb100;
+    --button-primary-active: #d29d00;
+    --ukuran-teks: 14px;
+  }
+
 html {
-    font-size: 14px;
+    font-size: var(--ukuran-teks);
 }
 
 body{
     @apply bg-gray-100;
-    /* padding: 1rem; */
     color: #495057;
-    /* background: bg-gray-100; */
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
-    /* font-size: 14px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login-card-top-shadow {
+    border-radius: 56px;
+    padding: '0.3rem'!important;
+    background: linear-gradient(180deg, var(--color-primary)  10%, rgba(33, 150, 243, 0) 30%);
 }
 
 .layout-sidebar {
     position:fixed;
-    /* width:300px; */
     height:calc(100vh - 12rem);
     z-index:999;
     overflow-y:auto;
-    /* top:7rem; */
-    /* left:2rem; */
     transition:transform .2s,left .2s;
     /* background-color:var(--surface-overlay); */
     /* border-radius:12px; */
@@ -42,6 +50,20 @@ body{
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.p-button{
+    background-color: var(--button-primary) !important;
+    color: #212529!important;
+    font-weight: 900!important;
+    font-size: larger!important;
+    border-color: 1px solid var(--button-primary)!important;
+}
+.p-button:hover{
+    background-color: var(--button-primary-hover) !important;
+}
+.p-button:active{
+    background-color: var(--button-primary-active) !important;
 }
 
 .p-component {

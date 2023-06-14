@@ -6,7 +6,7 @@ import {
   ChevronDownIcon,
   CreditCardIcon,
   Cog8ToothIcon,
-  ArrowLeftOnRectangleIcon
+  ArrowLeftOnRectangleIcon,
 } from '@heroicons/react/24/solid';
 import { BellIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { Menu, Transition, Popover } from '@headlessui/react';
@@ -136,7 +136,7 @@ export default function TopBar({ showNav, setShowNav }) {
                 <Menu.Item>
                   <Link
                     href="#"
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    className="flex hover:bg-orange-100 hover:text-text-primary-hover text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <PencilIcon className="h-4 w-4 mr-2" />
                     Edit
@@ -145,7 +145,7 @@ export default function TopBar({ showNav, setShowNav }) {
                 <Menu.Item>
                   <Link
                     href="#"
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    className="flex hover:bg-orange-100 hover:text-text-primary-hover text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <CreditCardIcon className="h-4 w-4 mr-2" />
                     Billing
@@ -154,7 +154,7 @@ export default function TopBar({ showNav, setShowNav }) {
                 <Menu.Item>
                   <Link
                     href="#"
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    className="flex hover:bg-orange-100 hover:text-text-primary-hover text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <Cog8ToothIcon className="h-4 w-4 mr-2" />
                     Settings
@@ -164,10 +164,10 @@ export default function TopBar({ showNav, setShowNav }) {
                   <a
                     href="#"
                     onClick={(e) => {
-                      e.preventDefault()
-                      signOut()
+                      e.preventDefault();
+                      signOut();
                     }}
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    className="flex hover:bg-orange-100 hover:text-text-primary-hover text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <ArrowLeftOnRectangleIcon className="h-4 w-4 mr-2" />
                     Logout

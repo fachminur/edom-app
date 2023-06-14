@@ -14,6 +14,7 @@ module.exports = {
         'text-primary-hover': '#f97316',
         'bg-primary-hover': '#ffedd5',
         'primary-color': '#6366F1',
+        'bg-ground': '#eff3f8',
         'text-color': '#495057',
         'text-color-secondary': '#6c757d',
       },

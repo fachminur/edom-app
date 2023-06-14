@@ -9,7 +9,6 @@ import { Rating } from 'primereact/rating';
 import { Tag } from 'primereact/tag';
 import { Chart } from 'primereact/chart';
 import { Menu } from 'primereact/menu';
-import { ProgressBar } from 'primereact/progressbar';
 import { ProductService } from './service/ProductService';
 
 const lineData = {
